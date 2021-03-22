@@ -1,0 +1,33 @@
+2. Give a write up on Difference between copy by value and copy by reference.
+
+Answer: 
+Copy by value- Only the value is copied and address is not copied. So the change 
+done in the assigned variable does not affect the value of the original variable.Copy by value
+works only for primitive data types. Below example clearly explains copy by value.
+
+Eg:                                       Output:
+var a = 10;                   
+var b = "xyz";               10, "xyz" , 20 , "mno"
+c = a;
+d = b;
+var c = 20;
+var d = "mno";
+console.log(a,b,c,d)
+
+Copy by reference- The address is copied and value is not copied. So new memory allocation is 
+not done. Therefore changes in the one variable affects the other variable. Copy by reference 
+works for non-primitive data types.
+
+Eg:                                             Output:
+var a = [10,20,30]; 
+console.log(a);                        [ 10, 20, 30 ]   
+b = a;
+b.push(40);                            [ 10, 20, 30, 40 ]
+console.log(a);
+
+3. How to copy by value a composite datatype (array+objects).
+
+Answer:
+           Using the spread (...) operator
+           Using the Object.assign() method
+           Using the JSON.stringify() and JSON.parse() methods
